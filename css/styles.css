@@ -247,7 +247,7 @@ a{
 }
 
 /* card */
-.card{
+.projects .card{
     max-width: 380px;
     border-radius: 10px;
     margin-top: 20px;
@@ -257,15 +257,15 @@ a{
     display: flex;
 }
 
-.card img{
+.projects .card img{
     width: 100%;
     transition: .5s ease;
 }
-.card:hover img{
+.projects .card:hover img{
     transform: scale(1.1);
 }
 
-.card .card__body{
+.projects .card .card__body{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -281,24 +281,28 @@ a{
     transform: translateY(100%);
     transition: .5s ease;
 }
-.card:hover .card__body{
+.projects .card:hover .card__body{
     transform: translateY(0);
 }
-.card__body .card__heading{
+.projects .card__body .card__heading{
     font-size: 3rem;
     color: #eff4fd;
     margin: 0;
 }
 
-.card__body p{
+.projects .card__body p{
     color: #eff4fd;
 }
 
-.cards{
+.projects .cards{
     justify-items: center;
 
 }
-.cards.grid--col-2, .cards.cards.grid--col-3{
+.projects .grid{
+    justify-content: center;
+    justify-items: center;
+}
+.projects .cards.grid--col-2, .cards.cards.grid--col-3{
     column-gap: 30px;
 }
 
@@ -373,4 +377,115 @@ a{
 
 .success a{
     margin-top: 20px;
+}
+
+/* Skills */
+
+.skills{
+    margin-top: var(--section-margin);
+}
+
+.skills img {
+    height: 80px;
+    width: 80px;
+  }
+.skills .card {
+    /* height: fit-content; */
+    padding: 5px;
+    /* width: 200px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+  }
+  .skills .card--html {
+    box-shadow: 0 0 #0000, 0 0 #000, 0 4px 6px -1px #f97316,
+      0 2px 4px -2px #f97316;
+  }
+  .skills .card--css {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #3b82f6,
+      0 2px 4px -2px #3b82f6;
+  }
+  .skills .card--typescript {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #2563eb,
+      0 2px 4px -2px #2563eb;
+  }
+  .skills .card--tailwindcss {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #93c5fd,
+      0 2px 4px -2px #93c5fd;
+  }
+  .skills .card--github {
+    box-shadow: 0 0 #0000, 0 0 #9ca3af, 0 4px 6px -1px #9ca3af,
+      0 2px 4px -2px #000;
+  }
+  .skills .card--react {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #2563eb,
+      0 2px 4px -2px #2563eb;
+  }
+  .skills .card--vite {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #eab308,
+      0 2px 4px -2px #eab308;
+  }
+  .skills .card--javascript {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #eab308,
+      0 2px 4px -2px #eab308;
+  }
+  .skills .card--bootstrap {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #a855f7,
+      0 2px 4px -2px #a855f7;
+  }
+  .skills .card--redux {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #a855f7,
+      0 2px 4px -2px #a855f7;
+  }
+  .skills .card--python{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #3b82f6,
+      0 2px 4px -2px #3b82f6;
+  }
+  .skills .card--django{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #22c55e ,0 2px 4px -2px #22c55e;
+  }
+  .skills .card--docker{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #3b82f6,
+    0 2px 4px -2px #3b82f6;
+  }
+  .skills .card--postgresql{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #3b82f6,
+      0 2px 4px -2px #3b82f6;
+  }
+  .skills .card--flask{
+    box-shadow: 0 0 #0000, 0 0 #9ca3af, 0 4px 6px -1px #9ca3af,
+      0 2px 4px -2px #000;
+  }
+  .skills .card--node{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #4ade80 ,0 2px 4px -2px #4ade80;
+  }
+  
+  .skills p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .skills h2{
+    text-align: center;
+  }
+
+  .skills .grid{
+    justify-content: center;
+    justify-items: stretch;
+    gap: 40px;
+    align-items: stretch;
+    padding: 20px;
+    padding-inline: 50px;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  @media screen and (max-width: 765px){
+    .skills .grid--col-2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.container{
+    width: 90%;
+    margin-inline: auto;
 }
