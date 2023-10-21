@@ -15,6 +15,8 @@ body{
 
 ul{
     margin: 0;
+    list-style: none;
+    padding: 0;
 }
 
 p{
@@ -22,6 +24,11 @@ p{
 }
 a{
     text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    margin-inline: auto;
 }
 .text-center{
     text-align: center;
@@ -361,23 +368,106 @@ a{
 
 /* footer */
 .footer{
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 0;
     padding: 10px;
+    padding-top: 40px;
+    background-color: rgb(0 0 0/1);;
 }
-.footer ul{
+.footer .socials{
     display: flex;
+    position: fixed;
     list-style: none;
     margin: 0;
     padding-left: 0;
     justify-content: center;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
 }
-.footer ul > a{
-    margin: 10px;
+.footer .socials > a{
+    margin : 5px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #00000069;;
+    backdrop-filter: blur(15px);
 }
-.footer__copyright{
-    margin-top: 10px;
-    text-align: center;
+
+@media  screen and (max-width: 1024px) {
+    .hidden{
+        display: none;
+        
+    }
 }
+
+
+@media screen and (min-width: 1024px) {
+    .footer__copyright{
+        margin-top: 10px;
+        text-align: center;
+        color:#fff;
+    }
+    .footer .socials{
+        display: none;
+        position: fixed;
+        width: fit-content;
+        flex-direction: column;
+        bottom: 5.5%;
+        left: 0;
+        
+    }
+    .footer{
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding: 10px;
+        padding-bottom: 15px;
+        background-color: rgb(0 0 0/1);;
+    }
+    .hidden{
+        display: block;
+        position: fixed;
+        bottom: 10%;
+    }
+}
+
+
+/* socials  */
+
+.socials--side{
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    display: flex;
+    flex-direction: column;
+}
+.socials--side li{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    align-items: center;
+    height: 3.5rem;
+    padding-inline: 1rem;
+    margin-left: -100px;
+    backdrop-filter: blur(15px);
+    background-color: #00000069;
+}
+.socials--side li:hover{
+    margin-left: -10px;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+.socials--side a{
+    color: inherit; 
+    font-family: Raleway,sans-serif;
+    font-size: 19px;
+}
+.socials--side a:first-of-type li{
+    border-top-right-radius: 0.375rem;
+}
+.socials--side a:last-of-type li{
+    border-bottom-right-radius: 0.375rem;
+}
+
+
 
 
 /* Success */
@@ -496,8 +586,5 @@ a{
     }
 }
 
-.container{
-    width: 90%;
-    margin-inline: auto;
-}
+
 
