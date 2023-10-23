@@ -586,5 +586,17 @@ a{
     }
 }
 
-
-
+/* About me */
+#about-me{
+    margin-top: var(--section-margin);
+}
+#about-me h2{
+    text-align: center;
+}
+#about-me .heading span{
+    color: #03a9f4c4;;
+}
+#about-me p{
+    font-size: 1.25rem;
+    color: #5b4545;
+}
